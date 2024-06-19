@@ -3,7 +3,7 @@ create database starup;
 create table membros(
 membro_id int primary key,
 nome varchar(20),
-cargo varchar(20)
+cargo varchar(50)
 );
 
 create table tarefas(
@@ -14,7 +14,7 @@ foreign key (membro_id) references membros(membro_id)
 );
 
 insert into membros(membro_id, nome, cargo) values(
-1,'Paulo', 'Programador1');
+1, 'Paulo', 'Programador1');
 
 insert into membros(membro_id, nome, cargo) values(
 2, 'João Silva', 'Desenvolvedor Full Stack');
@@ -25,7 +25,7 @@ insert into membros(membro_id, nome, cargo, genero) values(
 insert into membros(membro_id, nome, cargo, genero) values(
 4,'Pedro Oliveira', 'Engenheiro de Software', 'M');
 
-insert into membros(membros_id, nome, cargo, genero) values(
+insert into membros(membro_id, nome, cargo, genero) values(
 5,'Ana Costa', 'Administrador de Redes', 'F');
 
 insert into membros(membro_id,nome,cargo,genero) values(
@@ -52,7 +52,9 @@ insert into tarefas(tarefa_id, descricao, membro_id) values(
 
 alter table membros add genero char(1);
 
-update membros set genero = 'M'where membro_id = 1;
+UPDATE membros set nome = 'Andre Luiz' where membro_id = 1;
+
+update membros set genero = 'M' where membro_id = 1;
 
 update membros set genero = 'M' where membro_id = 2;
 
@@ -84,4 +86,4 @@ inner join tarefas
 on membros.membro_id = membros.membro_id;
 
 
-
+SELECT * FROm membros
