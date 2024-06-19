@@ -80,10 +80,10 @@ membros.nome,
 membros.cargo,
 tarefas.descricao,
 tarefas.data_inicio,
-tarefas. data_finalizacao
+tarefas.data_finalizacao
 from membros
 inner join tarefas
-on membros.membro_id = membros.membro_id;
+on tarefas.membro_id = membros.membro_id;
 
 
 SELECT * FROm membros
