@@ -1,0 +1,8 @@
+select medico.nome_medico, pacientes.nome_paciente, consultas.data_consulta
+from medico
+inner join relacao_consultas
+on medico.id_medico = relacao_consultas.id_medico
+inner join pacientes
+on pacientes.id_paciente = relacao_consultas.id_paciente
+inner join consultas
+on consultas.id_consultas = relacao_consultas.id_consulta
